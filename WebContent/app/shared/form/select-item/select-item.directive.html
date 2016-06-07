@@ -1,0 +1,17 @@
+<form class="form-horizontal container" role="form">
+   	<div class="col-sm-12">
+	    <div class="form-group">
+		    <label for="{{ etiqueta }}" class="col-sm-4 control-label">
+		    	{{ etiqueta }} <span ng-show="{{ requerido }}">*</span>
+	    	</label>
+		    <div class="col-sm-8">
+			    <select 
+			    	id="{{ etiqueta }}"
+			    	class="form-control"
+      				ng-options="option.contenido for option in lista track by option.id"
+      				ng-model="modelo">
+   				</select>
+		    </div>     
+	    </div>
+	</div>
+</form>

@@ -14,6 +14,12 @@
 	      controller: 'ArbolFamiliarController',
           controllerAs: 'arbolFamiliarVm'
 	    })
+	    .state('persona-familiar', {
+	      url: "/persona-familiar",
+	      templateUrl: "app/components/persona-familiar/persona-familiar.view.html",
+	      controller: 'PersonaFamiliarController',
+          controllerAs: 'personaFamiliarVm'
+	    })
 	    ;
 
 	};

@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+  		<h4><b>Nueva persona</b></h4>
+  	</div>	
+    <div class="panel-body">
+
+		<input-text 
+			etiqueta="Nombres"
+			requerido="true"
+			placeholder="Ingrese sus nombres"
+			modelo="personaFamiliarVm.modelo.nombres">
+		</input-text>
+
+		<input-text 
+			etiqueta="Apellidos"
+			requerido="true"
+			placeholder="Ingrese sus apellidos"
+			modelo="personaFamiliarVm.modelo.apellidos">
+		</input-text>
+
+		<select-item 
+			etiqueta="Sexo"
+			requerido="true"
+			lista="personaFamiliarVm.referencias.sexos"
+			modelo="personaFamiliarVm.modelo.sexo">
+		</select-item>
+		
+		
+		<select-item 
+			etiqueta="Estado"
+			requerido="true"
+			lista="personaFamiliarVm.referencias.estados"
+			modelo="personaFamiliarVm.modelo.estado">
+		</select-item>
+
+{{ personaFamiliarVm }}
+
+  	</div>
+</div>

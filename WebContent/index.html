@@ -5,10 +5,11 @@
 <title>Mi árbol familiar</title>
 <link rel="stylesheet" href="assets/libs/bower_components/bootstrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/libs/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="assets/libs/bower_components/font-awesome/css/font-awesome.min.css">
 </head>
 <body ng-app="main">
 
-  <a ui-sref="arbol-familiar">Mostrar árbol familiar</a>
+  <div ng-include="'app/components/menu/menu.html'"></div>
 
   <div ui-view></div>
 
@@ -18,8 +19,12 @@
   <script src="assets/libs/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
   <script src="app/app.module.js"></script>
-  <script src="app/components/arbol-familiar/arbol-familiar.controller.js"></script>
   <script src="app/app.routes.js"></script>
+  <script src="app/components/arbol-familiar/arbol-familiar.controller.js"></script>
+  <script src="app/components/persona-familiar/persona-familiar.controller.js"></script>
+
+  <script src="app/shared/form/input-text/input-text.directive.js"></script>
+  <script src="app/shared/form/select-item/select-item.directive.js"></script>
 
 </body>
 </html>
