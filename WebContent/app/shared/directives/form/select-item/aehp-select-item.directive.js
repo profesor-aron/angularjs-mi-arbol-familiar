@@ -1,15 +1,17 @@
 angular
     .module('main')
-    .directive('selectItem', selectItem);
+    .directive('aehpSelectItem', aehpSelectItem);
 
-function selectItem() {
+function aehpSelectItem() {
     var directive = {
         restrict: 'E',
-        templateUrl: 'app/shared/form/select-item/select-item.directive.html',
+        templateUrl: 'app/shared/directives/form/select-item/aehp-select-item.directive.html',
         scope: {
         	etiqueta: '@',
         	requerido: '@?',
         	lista: '=',
+        	clave: '@',
+        	valor: '@',
             modelo: '='
         }
     };

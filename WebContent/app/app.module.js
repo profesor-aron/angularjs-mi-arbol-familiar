@@ -1,3 +1,4 @@
 angular.module("main", [
-    "ui.router"
+    "ui.router",
+    "ui.bootstrap"
 ]);

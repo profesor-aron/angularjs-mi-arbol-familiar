@@ -17,7 +17,7 @@
 			{id: '2', contenido: 'Femenino'},
 			{id: '3', contenido: 'No definido'}
 		];
-		
+
 		vm.referencias.estados = [
 			{id: '1', contenido: 'Con vida'},
 			{id: '2', contenido: 'Fallecido'}

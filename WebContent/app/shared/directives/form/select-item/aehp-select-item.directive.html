@@ -1,4 +1,4 @@
-<form class="form-horizontal container" role="form">
+<div class="form-horizontal container">
    	<div class="col-sm-12">
 	    <div class="form-group">
 		    <label for="{{ etiqueta }}" class="col-sm-4 control-label">
@@ -8,10 +8,10 @@
 			    <select 
 			    	id="{{ etiqueta }}"
 			    	class="form-control"
-      				ng-options="option.contenido for option in lista track by option.id"
+      				ng-options="option[valor] for option in lista track by option[clave]"
       				ng-model="modelo">
    				</select>
 		    </div>     
 	    </div>
 	</div>
-</form>
+</div>

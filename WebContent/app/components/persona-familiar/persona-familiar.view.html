@@ -1,39 +1,47 @@
 <div class="panel panel-default">
 	<div class="panel-heading">
   		<h4><b>Nueva persona</b></h4>
-  	</div>	
+  	</div>
     <div class="panel-body">
 
-		<input-text 
+		<aehp-input-text 
 			etiqueta="Nombres"
 			requerido="true"
 			placeholder="Ingrese sus nombres"
 			modelo="personaFamiliarVm.modelo.nombres">
-		</input-text>
+		</aehp-input-text>
 
-		<input-text 
+		<aehp-input-text 
 			etiqueta="Apellidos"
 			requerido="true"
 			placeholder="Ingrese sus apellidos"
 			modelo="personaFamiliarVm.modelo.apellidos">
-		</input-text>
+		</aehp-input-text>
 
-		<select-item 
+		<aehp-select-item 
 			etiqueta="Sexo"
 			requerido="true"
 			lista="personaFamiliarVm.referencias.sexos"
+			clave="id"
+        	valor="contenido"
 			modelo="personaFamiliarVm.modelo.sexo">
-		</select-item>
-		
-		
-		<select-item 
+		</aehp-select-item>
+
+		<aehp-select-item
 			etiqueta="Estado"
 			requerido="true"
 			lista="personaFamiliarVm.referencias.estados"
+			clave="id"
+        	valor="contenido"
 			modelo="personaFamiliarVm.modelo.estado">
-		</select-item>
+		</aehp-select-item>
 
-{{ personaFamiliarVm }}
+		<aehp-input-date
+			etiqueta="Fecha de nacimiento"
+			modelo="personaFamiliarVm.modelo.fechaDeNacimiento">
+		</aehp-input-date>
+
+		{{ personaFamiliarVm }}
 
   	</div>
 </div>

@@ -1,0 +1,33 @@
+<div class="form-horizontal container">
+   	<div class="col-sm-12">
+	    <div class="form-group">
+		    <label for="{{ etiqueta }}" class="col-sm-4 control-label">
+		    	{{ etiqueta }} <span ng-show="{{ requerido }}">*</span>
+	    	</label>
+		    <div class="col-sm-8">
+
+				<p class="input-group">
+					<input
+						id="{{ etiqueta }}"
+						type="text"
+						class="form-control"
+						uib-datepicker-popup="{{ format }}"
+						ng-model="modelo"
+						is-open="popup.opened"
+						datepicker-options="dateOptions"
+						show-button-bar="false" />
+
+					<span class="input-group-btn">
+					    <button
+					    	type="button"
+					    	class="btn btn-default"
+					    	ng-click="open()">
+					    	<i class="glyphicon glyphicon-calendar"></i>
+					    </button>
+	  				</span>
+				</p>
+
+		    </div>
+	    </div>
+	</div>
+</div>

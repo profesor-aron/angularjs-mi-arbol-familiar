@@ -1,11 +1,11 @@
 angular
     .module('main')
-    .directive('inputText', inputText);
+    .directive('aehpInputText', aehpInputText);
 
-function inputText() {
+function aehpInputText() {
     var directive = {
         restrict: 'E',
-        templateUrl: 'app/shared/form/input-text/input-text.directive.html',
+        templateUrl: 'app/shared/directives/form/input-text/aehp-input-text.directive.html',
         scope: {
         	etiqueta: '@',
         	requerido: '@?',
