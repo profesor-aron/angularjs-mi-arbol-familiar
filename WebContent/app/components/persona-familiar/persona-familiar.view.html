@@ -41,18 +41,8 @@
 			modelo="personaFamiliarVm.modelo.fechaDeNacimiento">
 		</aehp-input-date>
 
-<div ui-grid="personaFamiliarVm.gridOptions" 
-     ui-grid-selection 
-     ui-grid-pagination>
-
-	<div class="aehp-no-rows" 
-		 ng-show="!personaFamiliarVm.gridOptions.data.length">
-  		<div class="aehp-msg">
-    		<span>No hay registros</span>
-  		</div>
-	</div>
-
-</div>
+		<aehp-grid options="personaFamiliarVm.gridOptions">
+		</aehp-grid>
 
 		{{ personaFamiliarVm }}
 

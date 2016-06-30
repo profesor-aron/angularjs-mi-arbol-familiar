@@ -27,23 +27,13 @@
 			{id: '2', contenido: 'Fallecido'}
 		];
 
-		vm.gridOptions = {
-			paginationPageSizes: [2, 5, 10],
-		    paginationPageSize: 2,
-			enableFiltering: true,
-			enableRowSelection: true,
-			selectionRowHeaderWidth: 35,
-			rowHeight: 35,
-			enableSelectAll: false,
-			showGridFooter:false,
-			multiSelect: false
-		};
+		vm.gridOptions = {};
 
 		vm.gridOptions.columnDefs = [
-		    { name: 'Nombres', field: 'nombres' },
-			{ name: 'Apellidos', field: 'apellidos'},
-			{ name: 'Sexo', field: 'sexo.contenido'},
-			{ name: 'Estado', field: 'estado.contenido'}
+		    { name: 'nombres' },
+			{ name: 'apellidos' },
+			{ name: 'sexo', field: 'sexo.contenido' },
+			{ name: 'estado', field: 'estado.contenido' }
 		];
 
 		vm.gridOptions.data = [
