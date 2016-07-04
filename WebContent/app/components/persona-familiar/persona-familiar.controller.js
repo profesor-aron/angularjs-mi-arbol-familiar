@@ -83,6 +83,11 @@
 
 		//vm.gridOptions.data = [];
 
+		vm.gridOptions.fnSelectRow = function(entity) {
+  		  console.log(entity);
+  		  console.log("coucou");
+		};
+
 	}
 
 })();
