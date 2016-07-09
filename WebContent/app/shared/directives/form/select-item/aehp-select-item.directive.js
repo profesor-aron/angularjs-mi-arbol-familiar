@@ -1,6 +1,6 @@
 angular
     .module('main')
-    .directive('aehpSelectItem', aehpSelectItem);
+    .directive('aehpSelectItem', aehpSelectItem); // <aehp-select-item></aehp-select-item>
 
 function aehpSelectItem() {
     var directive = {
@@ -9,10 +9,12 @@ function aehpSelectItem() {
         scope: {
         	etiqueta: '@',
         	requerido: '@?',
+        	placeholder: '@?',
         	lista: '=',
         	clave: '@',
         	valor: '@',
-            modelo: '='
+            modelo: '=',
+            error: '=?'
         }
     };
 

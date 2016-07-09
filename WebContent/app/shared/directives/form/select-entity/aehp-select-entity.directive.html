@@ -1,0 +1,20 @@
+<div class="form-horizontal">
+   	<div class="col-sm-12">
+	    <div class="form-group">
+
+		    <label for="{{ etiqueta }}" class="col-sm-4 control-label">
+		    	{{ etiqueta }} <span ng-show="{{ requerido }}">*</span>
+	    	</label>
+		    <div class="col-sm-8">
+
+				<button type="button" class="btn btn-default" ng-click="open()">
+					<span class="glyphicon glyphicon glyphicon-search"></span>
+				</button>
+
+				<span>{{ placeholder }}</span>
+
+		    </div>
+
+	    </div>
+	</div>
+</div>

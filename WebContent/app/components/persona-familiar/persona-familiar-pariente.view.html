@@ -1,0 +1,18 @@
+<table class="table table-bordered" ng-if="personaFamiliarVm.modelo.pariente">
+  <thead>
+    <tr>
+      <th>Nombres</th>
+      <th>Apellidos</th>
+      <th>sexo</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ personaFamiliarVm.modelo.pariente.nombres }}</td>
+      <td>{{ personaFamiliarVm.modelo.pariente.apellidos }}</td>
+      <td>{{ personaFamiliarVm.modelo.pariente.sexo.contenido }}</td>
+      <td>{{ personaFamiliarVm.modelo.pariente.estado.contenido }}</td>
+    </tr>
+  </tbody>
+</table>

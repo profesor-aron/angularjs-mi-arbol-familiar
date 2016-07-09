@@ -1,17 +1,22 @@
-<div class="form-horizontal container">
+<div class="form-horizontal">
    	<div class="col-sm-12">
 	    <div class="form-group">
 		    <label for="{{ etiqueta }}" class="col-sm-4 control-label">
 		    	{{ etiqueta }} <span ng-show="{{ requerido }}">*</span>
 	    	</label>
 		    <div class="col-sm-8">
-			    <select 
+			    <select
+			        data-placeholder="- Seleccione aqui -" 
 			    	id="{{ etiqueta }}"
 			    	class="form-control"
       				ng-options="option[valor] for option in lista track by option[clave]"
       				ng-model="modelo">
+      				<option value="" disabled selected style="display: none;">{{ placeholder }}</option>
    				</select>
-		    </div>     
+
+				<aehp-error-message error="error"></aehp-error-message>
+
+		    </div>
 	    </div>
 	</div>
 </div>

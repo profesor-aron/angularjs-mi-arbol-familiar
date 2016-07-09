@@ -1,2 +1,62 @@
-View del árbol
-{{ arbolFamiliarVm.name }}
+<aehp-panel titulo="Árbol Familiar">
+
+	<aehp-panel titulo="Persona detalle">
+		<div class="row">
+			<div class="col-sm-6">
+
+				<aehp-display-text
+					etiqueta="Nombres"
+					texto="arbolFamiliarVm.persona.nombres">
+				</aehp-display-text>
+
+				<aehp-display-text
+					etiqueta="Apellidos"
+					texto="arbolFamiliarVm.persona.apellidos">
+				</aehp-display-text>	
+
+				<aehp-display-text
+					etiqueta="Sexo"
+					texto="arbolFamiliarVm.persona.sexo.contenido">
+				</aehp-display-text>
+
+				<aehp-display-text
+					etiqueta="Estado"
+					texto="arbolFamiliarVm.persona.estado.contenido">
+				</aehp-display-text>
+
+			</div>
+
+			<div class="col-sm-6">
+
+				<aehp-display-text
+					etiqueta="Pariente"
+					texto="arbolFamiliarVm.persona.pariente">
+				</aehp-display-text>
+
+				<aehp-display-text
+					etiqueta="Parentesco"
+					texto="arbolFamiliarVm.persona.parentesco.contenido ">
+				</aehp-display-text>					
+
+				<aehp-display-text
+					etiqueta="Papá"
+					texto="arbolFamiliarVm.persona.papa">
+				</aehp-display-text>
+
+				<aehp-display-text
+					etiqueta="Mamá"
+					texto="arbolFamiliarVm.persona.mama">
+				</aehp-display-text>
+
+			</div>
+
+		</div>
+	</aehp-panel>
+
+	<aehp-panel titulo="Lista de Personas">
+
+		<aehp-grid options="arbolFamiliarVm.gridOptions"></aehp-grid>
+
+	</aehp-panel>
+
+</aehp-panel>

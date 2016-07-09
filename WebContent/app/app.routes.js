@@ -1,12 +1,15 @@
+// IIFE
+// Immediately Invoked Function Expression (IIFE)
 (function() {
     'use strict';
 
     angular.module("main").config(AppRoutes);
 
 	function AppRoutes($stateProvider, $urlRouterProvider) {
-
+	
+		// Asignamos la vista a mostrar por defecto
 		$urlRouterProvider.otherwise("/arbol-familiar");
-
+		
 		$stateProvider
 	    .state('arbol-familiar', {
 	      url: "/arbol-familiar",
@@ -21,7 +24,7 @@
           controllerAs: 'personaFamiliarVm'
 	    })
 	    ;
-
+	
 	};
-
+    
 })();

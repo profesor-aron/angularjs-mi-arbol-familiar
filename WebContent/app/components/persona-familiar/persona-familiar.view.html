@@ -1,39 +1,44 @@
-<div class="panel panel-default">
-	<div class="panel-heading">
-  		<h4><b>Nueva persona</b></h4>
-  	</div>
-    <div class="panel-body">
+<aehp-panel titulo="Nueva persona">
+
+  <div class="row">
+    <div class="col-sm-6">
 
 		<aehp-input-text 
 			etiqueta="Nombres"
 			requerido="true"
-			placeholder="Ingrese sus nombres"
-			modelo="personaFamiliarVm.modelo.nombres">
+			placeholder="Ingrese aqui los nombres"
+			modelo="personaFamiliarVm.modelo.nombres"
+			error="personaFamiliarVm.errores.nombres">
 		</aehp-input-text>
 
-		<aehp-input-text 
+		<aehp-input-text
 			etiqueta="Apellidos"
 			requerido="true"
-			placeholder="Ingrese sus apellidos"
-			modelo="personaFamiliarVm.modelo.apellidos">
-		</aehp-input-text>
+			placeholder="Ingrese aqui los apellidos"
+		 	modelo="personaFamiliarVm.modelo.apellidos"
+		 	error="personaFamiliarVm.errores.apellidos">
+	 	</aehp-input-text>
 
 		<aehp-select-item 
 			etiqueta="Sexo"
 			requerido="true"
+			placeholder="- Seleccione aqui el sexo -"
 			lista="personaFamiliarVm.referencias.sexos"
 			clave="id"
-        	valor="contenido"
-			modelo="personaFamiliarVm.modelo.sexo">
+	       	valor="contenido"
+			modelo="personaFamiliarVm.modelo.sexo"
+			error="personaFamiliarVm.errores.sexo">
 		</aehp-select-item>
 
 		<aehp-select-item
 			etiqueta="Estado"
 			requerido="true"
+			placeholder="- Seleccione aqui el estado -"
 			lista="personaFamiliarVm.referencias.estados"
 			clave="id"
-        	valor="contenido"
-			modelo="personaFamiliarVm.modelo.estado">
+	       	valor="contenido"
+			modelo="personaFamiliarVm.modelo.estado"
+			error="personaFamiliarVm.errores.estado">
 		</aehp-select-item>
 
 		<aehp-input-date
@@ -41,9 +46,59 @@
 			modelo="personaFamiliarVm.modelo.fechaDeNacimiento">
 		</aehp-input-date>
 
-		<aehp-grid options="personaFamiliarVm.gridOptions"></aehp-grid>
+	   	<aehp-select-entity
+			titulo="Lista de parientes"
+			etiqueta="Pariente"
+			placeholder="Seleccione aqui el pariente"
+			grid-options="personaFamiliarVm.gridOptions"
+			modelo="personaFamiliarVm.modelo.pariente">
+		</aehp-select-entity>
 
-		{{ personaFamiliarVm }}
+		<div ng-include="'app/components/persona-familiar/persona-familiar-pariente.view.html'"></div>
 
+		<aehp-select-item
+			etiqueta="Parentesco"
+			placeholder="- Seleccione aqui el parentesco -"
+			lista="personaFamiliarVm.referencias.parentescos"
+			clave="id"
+	       	valor="contenido"
+			modelo="personaFamiliarVm.modelo.parentesco">
+		</aehp-select-item>
+
+	</div>
+	<div class="col-sm-6">
+
+		<aehp-select-entity
+		    titulo="Lista de parientes"
+			etiqueta="Papá"
+			placeholder="Seleccione aqui el padre"
+			grid-options="personaFamiliarVm.gridOptions"
+			modelo="personaFamiliarVm.modelo.papa">
+		</aehp-select-entity>
+
+		<div ng-include="'app/components/persona-familiar/persona-familiar-papa.view.html'"></div>
+
+		<aehp-select-entity
+			titulo="Lista de parientes"
+			etiqueta="Mamá"
+			placeholder="Seleccione aqui la madre"
+			grid-options="personaFamiliarVm.gridOptions"
+			modelo="personaFamiliarVm.modelo.mama">
+		</aehp-select-entity>
+
+        <div ng-include="'app/components/persona-familiar/persona-familiar-mama.view.html'"></div>
+
+    </div>
+  </div>
+
+  <div class="row">
+  	<div class="col-sm-12 text-center">
+  		<button type="button" class="btn btn-info" 
+  			ng-click="personaFamiliarVm.actions.registrar()">
+  			<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+  			Registrar
+  		</button>
   	</div>
-</div>
+  </div>
+
+</aehp-panel>

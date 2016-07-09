@@ -3,5 +3,7 @@ angular.module("main", [
     "ui.bootstrap",
     "ui.grid",
     "ui.grid.selection",
-    "ui.grid.pagination"
+    "ui.grid.pagination",
+    "LocalStorageModule",
+    "angular-growl"
 ]);

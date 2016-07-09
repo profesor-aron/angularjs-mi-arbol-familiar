@@ -9,7 +9,8 @@ function aehpInputDate() {
         scope: {
         	etiqueta: '@',
         	requerido: '@?',
-            modelo: '='
+            modelo: '=',
+            error: '=?'
         },
         link: link
     };

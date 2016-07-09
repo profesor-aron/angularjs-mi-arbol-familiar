@@ -1,16 +1,20 @@
-<div class="form-horizontal container">
+<div class="form-horizontal">
    	<div class="col-sm-12">
-	    <div class="form-group">
+   		<div class="form-group">
 		    <label for="{{ etiqueta }}" class="col-sm-4 control-label">
 		    	{{ etiqueta }} <span ng-show="{{ requerido }}">*</span>
 	    	</label>
 		    <div class="col-sm-8">
+
 		      <input type="text" 
 		      	class="form-control" 
 		      	id="{{ etiqueta }}" 
 		      	placeholder="{{ placeholder }}"
 		      	ng-model="modelo"/>
+
+		      <aehp-error-message error="error"></aehp-error-message>
+
 		    </div>
-	    </div>
+		</div>
 	</div>
 </div>

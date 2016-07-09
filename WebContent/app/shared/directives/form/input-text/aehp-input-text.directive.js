@@ -1,16 +1,18 @@
 angular
     .module('main')
-    .directive('aehpInputText', aehpInputText);
+    .directive('aehpInputText', aehpInputText); // aehp-input-text
 
+// <aehp-input-text></aehp-input-text>
 function aehpInputText() {
     var directive = {
         restrict: 'E',
         templateUrl: 'app/shared/directives/form/input-text/aehp-input-text.directive.html',
         scope: {
-        	etiqueta: '@',
+        	etiqueta: "@",
         	requerido: '@?',
         	placeholder: '@?',
-            modelo: '='
+            modelo: '=',
+            error: '=?'
         }
     };
 

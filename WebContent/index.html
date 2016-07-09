@@ -2,16 +2,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Mi árbol familiar</title>
+<title>Árbol familiar</title>
 <link rel="stylesheet" href="assets/libs/bower_components/bootstrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/libs/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="assets/libs/bower_components/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="assets/libs/bower_components/angular-ui-grid/ui-grid.min.css">
+<link rel="stylesheet" href="assets/libs/bower_components/angular-growl-v2/build/angular-growl.min.css">
+
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body ng-app="main">
 
-  <div ng-include="'app/components/menu/menu.html'"></div>
+  <div growl></div>
+
+  <div ng-include="'app/components/menu/menu.view.html'"></div>
 
   <div ui-view></div>
 
@@ -19,19 +23,30 @@
   <script src="assets/libs/bower_components/angular/angular.min.js"></script>
   <script src="assets/libs/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="assets/libs/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="assets/libs/bower_components/angular-i18n/angular-locale_es.js"></script>
   <script src="assets/libs/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <script src="assets/libs/bower_components/angular-i18n/angular-locale_es.js"></script>
   <script src="assets/libs/bower_components/angular-ui-grid/ui-grid.min.js"></script>
+  <script src="assets/libs/bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>  
+  <script src="assets/libs/bower_components/angular-growl-v2/build/angular-growl.min.js"></script>
 
   <script src="app/app.module.js"></script>
   <script src="app/app.routes.js"></script>
+  <script src="app/app.config.js"></script>
+
   <script src="app/components/arbol-familiar/arbol-familiar.controller.js"></script>
   <script src="app/components/persona-familiar/persona-familiar.controller.js"></script>
 
+  <script src="app/shared/directives/panel/aehp-panel.directive.js"></script>
   <script src="app/shared/directives/form/input-text/aehp-input-text.directive.js"></script>
   <script src="app/shared/directives/form/select-item/aehp-select-item.directive.js"></script>
   <script src="app/shared/directives/form/input-date/aehp-input-date.directive.js"></script>
   <script src="app/shared/directives/grid/aehp-grid.directive.js"></script>
+  <script src="app/shared/directives/form/select-entity/aehp-select-entity.directive.js"></script>
+  <script src="app/shared/directives/form/select-entity/aehp-modal-select-entity.controller.js"></script>
+  <script src="app/shared/directives/form/error-message/aehp-error-message.directive.js"></script>
+  <script src="app/shared/directives/form/display-text/aehp-display-text.directive.js"></script>
+
+  <script src="app/shared/services/data/data.service.js"></script>
 
 </body>
 </html>
